@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:eb_u201619823/api/SuperHero.dart';
 import 'package:http/http.dart' as http;
 
 class Service {

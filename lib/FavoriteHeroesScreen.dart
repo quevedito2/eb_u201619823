@@ -1,8 +1,5 @@
 import 'package:eb_u201619823/api/SuperHero.dart';
-import 'package:eb_u201619823/database/database.dart';
 import 'package:flutter/material.dart';
-import 'package:drift/native.dart';
-import 'package:drift/drift.dart' as dr;
 
 class FavoriteHeroesScreen extends StatelessWidget {
   final List<Superhero> favoriteHeroes;
@@ -13,10 +10,10 @@ class FavoriteHeroesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Heroes favoritos'),
+        title: const Text('Heroes favoritos'),
       ),
       body: favoriteHeroes.isEmpty
-          ? Center(
+          ? const Center(
               child: Text(
                 'No hay héroes favoritos.',
                 style: TextStyle(fontSize: 18.0),

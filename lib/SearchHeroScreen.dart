@@ -1,5 +1,3 @@
-import 'package:drift/drift.dart' as dr;
-import 'package:drift/native.dart';
 import 'package:eb_u201619823/api/SuperHero.dart';
 import 'package:eb_u201619823/api/Service.dart';
 import 'package:flutter/material.dart';
@@ -25,14 +23,14 @@ class _SearchHeroScreenState extends State<SearchHeroScreen> {
       context: context,
       builder: (context) {
         return AlertDialog(
-          title: Text('Error'),
+          title: const Text('Error'),
           content: Text(message),
           actions: <Widget>[
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         );
@@ -65,7 +63,7 @@ class _SearchHeroScreenState extends State<SearchHeroScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Buscar Heroes'),
+        title: const Text('Buscar Heroes'),
       ),
       body: Column(
         children: [
@@ -76,7 +74,7 @@ class _SearchHeroScreenState extends State<SearchHeroScreen> {
               decoration: InputDecoration(
                 labelText: 'Heroe',
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.search),
+                  icon: const Icon(Icons.search),
                   onPressed: () {
                     _searchSuperheroes();
                   },

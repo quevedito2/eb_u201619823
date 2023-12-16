@@ -1,6 +1,6 @@
+import 'package:eb_u201619823/SearchHeroScreen.dart';
+import 'package:eb_u201619823/FavoriteHeroesScreen.dart';
 import 'package:eb_u201619823/api/SuperHero.dart';
-import 'package:eb_u201619823/vista_consulta.dart';
-import 'package:eb_u201619823/vista_listado.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -46,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             favoriteHeroes: favoriteHeroes)),
                   );
                 },
-                child: Text('Heroes Favoritos'),
+                child: const Text('Heroes Favoritos'),
               ),
             ],
           ),

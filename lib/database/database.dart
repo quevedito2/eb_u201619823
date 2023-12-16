@@ -7,10 +7,16 @@ import 'package:drift/native.dart';
 part 'database.g.dart';
 
 class Posteo extends Table {
-  IntColumn get id => integer().named('id')();
-  IntColumn get userId => integer().named('userId')();
-  TextColumn get title => text().named('title')();
-  TextColumn get Body => text().named('body')();
+  // IntColumn get id => integer().named('id')();
+  // IntColumn get userId => integer().named('userId')();
+  // TextColumn get title => text().named('title')();
+  // TextColumn get Body => text().named('body')();
+
+  TextColumn get name => text().named('name')();
+  TextColumn get intelligence => text().named('intelligence')();
+  TextColumn get gender => text().named('gender')();
+  TextColumn get image => text().named('image')();
+  BoolColumn get isFavorite => boolean().named('isFavorite')();
 }
 
 LazyDatabase abrirConexion() {
@@ -35,13 +41,13 @@ class AppDataBases extends _$AppDataBases {
     return await select(posteo).get();
   }
 
-  Future<int> deletePost(int id) async {
-    return await (delete(posteo)..where((tbl) => tbl.id.equals(id))).go();
-  }
+  // Future<int> deletePost(int id) async {
+  //   return await (delete(posteo)..where((tbl) => tbl.id.equals(id))).go();
+  // }
 
-  Future<int> updatePost(PosteoCompanion posteoCompanion) async {
-    return await (update(posteo)
-          ..where((tbl) => tbl.id.equals(posteoCompanion.id.value)))
-        .write(posteoCompanion);
-  }
+  // Future<int> updatePost(PosteoCompanion posteoCompanion) async {
+  //   return await (update(posteo)
+  //         ..where((tbl) => tbl.id.equals(posteoCompanion.id.value)))
+  //       .write(posteoCompanion);
+  // }
 }
